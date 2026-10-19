@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Resultados de campañas, comisiones y rentabilidad por producto y plataforma.">
+    <title>Órbita · Rendimiento de campañas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="dashboard.js" defer></script>
+  </head>
+  <body class="bg-zinc-50 font-['DM_Sans',sans-serif] text-zinc-900 antialiased">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-zinc-900 focus:px-4 focus:py-3 focus:text-white">Ir al contenido</a>
+    <header id="context" aria-label="Contexto y filtros" class="border-b border-zinc-200 bg-white px-4 py-6 sm:px-8">
+      <div id="dashboard-heading"></div>
+      <div id="filters"></div>
+      <p id="filter-error" role="alert"></p>
+    </header>
+    <main id="main" class="mx-auto max-w-7xl px-4 pb-8 sm:px-8">
+      <p id="selection-status" role="status" aria-live="polite" class="py-4 text-sm text-zinc-600"></p>
+      <section aria-labelledby="summary-heading" class="min-w-0 border-b border-zinc-200 pb-8">
+        <h2 id="summary-heading" class="mb-4 text-lg font-semibold">Resumen ejecutivo</h2>
+        <div id="kpis"></div>
+        <div id="secondary-metrics"></div>
+      </section>
+      <section aria-labelledby="comparison-heading" class="min-w-0 border-b border-zinc-200 py-8">
+        <h2 id="comparison-heading" class="mb-5 text-lg font-semibold">Qué impulsa tus resultados</h2>
+        <div id="platform-comparison"></div>
+        <div id="product-comparison"></div>
+        <div id="funnel"></div>
+      </section>
+      <section aria-labelledby="engagement-heading" class="min-w-0 border-b border-zinc-200 py-8">
+        <h2 id="engagement-heading" class="mb-5 text-lg font-semibold">Conexión con tu comunidad</h2>
+        <div id="engagement"></div>
+      </section>
+      <section aria-labelledby="alerts-heading" class="min-w-0 border-b border-zinc-200 py-8">
+        <h2 id="alerts-heading" class="mb-5 text-lg font-semibold">En el radar</h2>
+        <div id="alerts"></div>
+      </section>
+      <section aria-labelledby="detail-heading" class="min-w-0 space-y-8 pt-8">
+        <h2 id="detail-heading" class="mb-5 text-lg font-semibold">Detalle operativo</h2>
+        <div id="product-table" class="min-w-0"></div>
+        <div id="platform-table" class="min-w-0"></div>
+        <div id="campaign-table" class="min-w-0"></div>
+      </section>
+    </main>
+    <footer id="definitions" class="border-t border-zinc-200 bg-white px-4 py-8 sm:px-8"></footer>
+    <noscript>Activa JavaScript para consultar los resultados y aplicar los filtros.</noscript>
+  </body>
+</html>
